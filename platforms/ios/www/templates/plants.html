@@ -1,0 +1,13 @@
+<ion-view view-title="Catálogo de hortaliças">
+  <ion-content>
+    <br>
+    <p class="text-center title">Hortaliças mais cultivadas no {{region}}</p>
+    <ion-list class="animate-ripple">
+      <ion-item ng-repeat="plant in plants" class="item-icon-right item-avatar" ui-sref="app.plant({ plantId: plant.id })">
+        <img ng-src="img/plants/{{plant.slug}}.png">
+        <h2>{{plant.nome}}</h2>
+        <p>{{plant.nome_cientifico}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

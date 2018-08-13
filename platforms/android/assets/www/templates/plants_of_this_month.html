@@ -1,0 +1,16 @@
+<ion-view view-title="O que plantar em {{month[1]}}">
+  <ion-content>
+    <div class="item item-body">
+      <h2 class="text-center title">{{month_desc[0]}}</h2>
+      <p class="text-center title">{{month_desc[1]}}</p>
+      <p class="text-center title">Confira abaixo algumas sugestões para este mês:</p>
+    </div>
+    <ion-list>
+      <ion-item ng-repeat="plant in plants" class="item-icon-right item-avatar" ui-sref="app.plant({ plantId: plant.id })">
+        <img ng-src="img/plants/{{plant.slug}}.png">
+        <h2>{{plant.nome}}</h2>
+        <p>{{plant.nome_cientifico}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

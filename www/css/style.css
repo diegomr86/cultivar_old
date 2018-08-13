@@ -1,0 +1,459 @@
+/* Empty. Add your own CSS if you like */
+/* Utilities */
+
+.link {
+  color: #116262;
+  font-weight: bold;
+}
+
+h4 {
+  color: #116262;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+h4:first-child {
+  border-top: none;
+  padding-top: initial;
+}
+
+.title-bordered {
+  border-top: solid 2px #bbb;
+  padding-top: 30px;
+}
+
+p {
+  color: #555;
+  margin: 0 0 25px;
+}
+
+.no-border {
+  border: none;
+}
+
+.static {
+  position: static;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border-top {
+  border-top: solid 1px #ccc;
+  padding-top: 30px;
+}
+
+.blue-grey-900 {
+  background-color: #263238 !important;
+  color: #fff;
+}
+/* Menu */
+
+.menu .bar.bar-header.expanded {
+  background: #fff;
+  /*background-size: 120%;*/
+  /*background-position: 0%;*/
+  color: #4CAF50;
+  transition: all .5s ease-in-out;
+  min-height: 100px;
+  border-bottom: 1px solid #ddd;
+}
+
+.has-expanded-header {
+    top: 100px !important;
+}
+
+.menu-bottom {
+  top: 45px;
+  left: 100px;
+  position: absolute;
+  font-size: 24px;
+}
+
+.menu.menu-left * {
+  font-weight: bold;
+}
+
+.item-radio input:checked ~ .item-content {
+  background: transparent;
+}
+
+.menu-open .ion-navicon {
+  transform: rotate(-360deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+  content: "\f2ca";
+}
+
+.item.item-radio .radio-icon {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.item.item-radio:active .radio-icon {
+  opacity: 0;
+  transform: scale(1.6);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.directions.button-bar {
+  margin: 0 auto;
+  width: 33.333%;
+}
+
+.directions.button-bar button {
+  line-height: 26px;
+}
+
+.ion-arrow-right-c.top-left:before {
+  transform: rotate(-135deg);
+}
+
+.ion-arrow-right-c.top-right:before {
+  transform: rotate(-45deg);
+}
+
+.ion-arrow-right-c.bottom-left:before {
+  transform: rotate(-225deg);
+}
+
+.ion-arrow-right-c.bottom-right:before {
+  transform: rotate(45deg);
+}
+
+#modal {
+  background-color: #ef4e3a;
+  border-radius: 100%;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  height: 50%;
+  bottom: 0;
+  opacity: 0;
+  width: 700px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.expand #modal {
+  background-color: #DBDBDB;
+  border-radius: 0;
+  border-top: solid 4px #ef4e3a;
+  opacity: 1;
+  z-index: 9;
+}
+/* CODE */
+
+.code {
+  color: #333;
+  font-family: monospace;
+  padding: 10px;
+  white-space: pre;
+}
+
+.code-wrapper {
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+.code-wrapper::before {
+  color: #1B5E20;
+  font-family: "Ionicons";
+  speak: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: '\f216 ';
+}
+
+.code-wrapper.active::before {
+  content: '\f207 ';
+}
+
+.code-wrapper .toggle {
+  color: #4CAF50;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 8px;
+  text-decoration: underline;
+}
+
+.code-wrapper .code {
+  opacity: 0;
+  margin-top: -20px;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: 0.1s all ease-in-out;
+  z-index: 9999999999;
+}
+
+.code-wrapper.code-wrapper-last .code {
+  position: relative;
+}
+
+.code-wrapper.active .code {
+  background: #f9f9f9;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  left: 16px;
+  height: initial;
+  margin-top: 15px;
+  padding: 15px;
+  right: 16px;
+  opacity: 1;
+  transition: 0.3s all ease-in-out;
+  width: initial;
+}
+
+.popover {
+  left: initial !important;
+  right: 16px !important;
+  top: 16px !important;
+}
+.platform-android .popover{
+  margin-top:10px;
+}
+
+.item-thumbnail-left {
+  padding-left: 85px;
+  padding-top: 20px;
+
+}
+
+.item-thumbnail-left > img:first-child {
+  width: 60px;
+  height: 60px;
+}
+
+.item-body .img-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.item-body .img-wrapper img {
+  max-width: 100%;
+}
+
+.plantio-table {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+ }
+
+.plantio-table p {
+  font-size: 12px;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.plantio-table p:first-child {
+  background-color: #27ae60;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.plantio-table .col {
+  padding: 0;
+}
+
+.plantio-table .col.active p:first-child {
+  background-color: #2ecc71;
+}
+
+.plantio-table .col.active p:last-child {
+  font-weight: bold;
+}
+
+p.table-legend {
+  font-size: 11px;
+  margin-top: 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.item-avatar .item-content>img:first-child {
+  max-width: 80px;
+  max-height: 80px;
+  top: 0;
+  left: 8px;
+}
+
+.hidden {
+  display: none;
+}
+.guide .box {
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+.guide .item.item-title {
+  cursor: pointer;
+}
+
+.guide .tip {
+  border: 1px solid #d0d0d0;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.guide .cap-1 .item-body h1, .guide .cap-1 .item-body h2, .guide .cap-1 .item-body h3, .guide .cap-1 .item-body h4 {
+  color: #3cc09b;
+}
+
+.guide .cap-1 .item-title {
+  background-color: #3cc09b;
+}
+
+.guide .cap-1 .item-title h3 {
+  color: #ffffff;
+}
+
+.guide .cap-1 .box {
+  background: #3cc09b;
+  color: #fff;
+}
+
+.guide .cap-1 .tip {
+  border-color: #3cc09b;
+}
+
+
+.guide .cap-2 .item-body h1, .guide .cap-2 .item-body h2, .guide .cap-2 .item-body h3, .guide .cap-2 .item-body h4 {
+  color: #2F1314;
+}
+
+.guide .cap-2 .item-title {
+  background-color: #ffde67;
+}
+
+.guide .cap-2 .item-title h3 {
+  color: #2F1314;
+}
+
+.guide .cap-2 .box {
+  background: #ffde67;
+  color: #2F1314;
+}
+
+.guide .cap-2 .box h3 {
+  color: #2F1314;
+}
+
+.guide .cap-2 .tip {
+  border-color: #ffde67;
+}
+
+
+.guide .cap-3 .item-body h1, .guide .cap-3 .item-body h2, .guide .cap-3 .item-body h3, .guide .cap-3 .item-body h4 {
+  color: #4ABD66;
+}
+
+.guide .cap-3 .item-title {
+  background-color: #4ABD66;
+}
+
+.guide .cap-3 .item-title h3 {
+  color: #fff;
+}
+
+.guide .cap-3 .item-body h1 {
+  color: #4ABD66;
+}
+
+.guide .cap-3 .box {
+  background: #4ABD66;
+  color: #fff;
+}
+
+.guide .cap-3 .box h3 {
+  color: #4ABD66;
+}
+
+.guide .cap-3 .tip {
+  border-color: #4ABD66;
+}
+
+
+.guide .cap-4 .item-body h1, .guide .cap-4 .item-body h2, .guide .cap-4 .item-body h3, .guide .cap-4 .item-body h4 {
+  color: #56BBBD;
+}
+
+.guide .cap-4 .item-title {
+  background-color: #56BBBD;
+}
+
+.guide .cap-4 .item-title h3 {
+  color: #fff;
+}
+
+.guide .cap-4 .item-body h3 {
+  color: #964F2F;
+}
+
+.guide .cap-4 .box {
+  background: #56BBBD;
+  color: #fff;
+}
+
+.guide .cap-4 .box h3 {
+  color: #56BBBD;
+}
+
+.guide .cap-4 .tip {
+  border-color: #56BBBD;
+}
+
+
+.guide .cap-5 .item-body h1, .guide .cap-5 .item-body h2, .guide .cap-5 .item-body h3, .guide .cap-5 .item-body h4 {
+  color: #FC9CA6;
+}
+
+.guide .cap-5 .item-title {
+  background-color: #FC9CA6;
+}
+
+.guide .cap-5 .item-title h3 {
+  color: #fff;
+}
+
+.guide .cap-5 .item-body h3 {
+  color: #964F2F;
+}
+
+.guide .cap-5 .box {
+  background: #FC9CA6;
+  color: #fff;
+}
+
+.guide .cap-5 .box h3 {
+  color: #FC9CA6;
+}
+
+.guide .cap-5 .tip {
+  border-color: #FC9CA6;
+}
+
+.moon h3 {
+  margin-bottom: 0;
+}
+
+.moon small {
+  display: block;
+}

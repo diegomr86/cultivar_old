@@ -1,0 +1,55 @@
+﻿
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-balanced">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right" ng-show="region">
+                <button class="button button-icon button-clear ion-android-locate" id="menu-popover" ng-click="clearRegion();" ui-sref="app.home"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="expanded">
+            <img src="img/logo.png" class="avatar motion spin fade">
+            <div class="menu-bottom">
+                Cultivar!
+            </div>
+        </ion-header-bar>
+        <ion-content class="has-expanded-header">
+            <ion-list>
+                <ion-item nav-clear menu-close ui-sref="app.home">
+                  Início
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.plants_of_this_month">
+                  O que plantar esse mês?
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.basic_tips">
+                  Dicas básicas
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.planning">
+                  Planejamento da Horta
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.weather">
+                  Quando plantar
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.planting">
+                  Como plantar
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.cares">
+                  Cuidados com a Horta
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.plants">
+                  Catálogo de hortaliças
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.about">
+                  Sobre
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

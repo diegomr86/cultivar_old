@@ -1,0 +1,47 @@
+<ion-view view-title="Catálogo de hortaliças">
+  <ion-content>
+    <div class="item">
+      <h2>{{plant.nome_popular}}</h2>
+      <p>{{plant.nome_cientifico}}</p>
+    </div>
+    <div class="item item-body">
+      <div class="img-wrapper"><img src="img/plants/{{plant.slug}}.png"></div>
+      <p>{{plant.descricao}}</p>
+      <h3>Recomendações de aproveitamento</h3>
+      <p>{{plant.aproveitamento}}</p>
+      <h3>Época e regiões para plantio</h3>
+      <div class="row plantio-table">
+        <div class="col" ng-class="{active: (region == 'Centro-oeste')}">
+          <p>C. Oeste</p>
+          <p>{{plant.plantio["Centro-oeste"]}}</p>
+        </div>
+        <div class="col" ng-class="{active: (region == 'Nordeste')}">
+          <p>Nordeste</p>
+          <p>{{plant.plantio["Nordeste"]}}</p>
+        </div>
+        <div class="col" ng-class="{active: (region == 'Norte')}">
+          <p>Norte</p>
+          <p>{{plant.plantio["Norte"]}}</p>
+        </div>
+        <div class="col" ng-class="{active: (region == 'Sudeste')}">
+          <p>Sudeste</p>
+          <p>{{plant.plantio["Sudeste"]}}</p>
+        </div>
+        <div class="col" ng-class="{active: (region == 'Sul')}">
+          <p>Sul</p>
+          <p>{{plant.plantio["Sul"]}}</p>
+        </div>
+      </div>
+      <p class="text-right table-legend" ng-if="plant.plantio.indexOf('*') >= 0">* Cultivo não recomendado.</p>
+      <p>{{plant.epoca_regiao}}</p>
+      <h3>
+        Colheita:
+      </h3>
+      <p>{{plant.colheita}} dias</p>
+      <h3>
+        Plantas companheiras:
+      </h3>
+      <p>{{plant.companheiras}}</p>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,109 @@
+<ion-view view-title="Cultivar!">
+  <ion-content>
+    <div ng-if="region" class="moon">
+      <div class="item item-body text-center" ng-if="moonPhase == 'nova'">
+        <h3>Hoje é dia de Lua nova</h3>
+        <small ng-if="nextMoon > 1"> Faltam {{nextMoon}} dias para o quarto crescente</small>
+        <small ng-if="nextMoon == 1"> Amanhã já entra o quarto crescente</small>
+        <br/>
+        <div class="img-wrapper"><img ng-src="img/home-lua-nova.png"></div>
+        <p>Nessa fase a seiva manifesta-se em maior quantidade no caule, em direção aos ramos</p>
+        <p><strong>Fase boa para:</strong> colheita de raízes (cenoura, nabo, beterraba, rabanete, etc) e podas de limpeza e produção de matéria seca.</p>
+      </div>
+      <div class="item item-body text-center" ng-if="moonPhase == 'crescente'">
+        <h3>Hoje é dia de Lua crescente</h3>
+        <small ng-if="nextMoon > 1"> Faltam {{nextMoon}} dias para a Lua cheia</small>
+        <small ng-if="nextMoon == 1"> Amanhã já entra a Lua cheia</small>
+        <br/>
+        <div class="img-wrapper"><img ng-src="img/home-lua-crescente.png"></div>
+        <p>Nessa fase a seiva está presente em maior quantidade no caule, nos ramos e nas folhas.</p>
+        <p><strong>Fase boa para:</strong> plantar tomate, pimentão, jiló, quiabo, berinjela, feijão – vagem, pepino, abóbora, milho, arroz, feijão e outras, sejam frutíferas, legumes ou cereais. Ideal para poda para brotação rápida.</p>
+      </div>
+      <div class="item item-body text-center" ng-if="moonPhase == 'cheia'">
+        <h3>Hoje é dia de Super Lua cheia</h3>
+        <small ng-if="nextMoon > 1"> Faltam {{nextMoon}} dias para o quarto minguante</small>
+        <small ng-if="nextMoon == 1"> Amanhã já entra o quarto minguante</small>
+        <br/>
+        <div class="img-wrapper"><img ng-src="img/home-lua-cheia.png"></div>
+        <p>Nessa fase a seiva manifesta-se em maior quantidade na copa da planta (ramos e folhas).</p>
+        <p><strong>Fase boa para:</strong> colheita de frutos e hortaliças de folha. No início desta fase planta-se: repolho, couve-flor, alface e outras. Além das hortaliças esta fase é ótima para o plantio de flores.</p>
+      </div>
+      <div class="item item-body text-center" ng-if="moonPhase == 'minguante'">
+        <h3>Hoje é dia de Lua minguante</h3>
+        <small ng-if="nextMoon > 1"> Faltam {{nextMoon}} dias para a lua nova</small>
+        <small ng-if="nextMoon == 1"> Amanhã já entra a lua nova</small>
+        <br/>
+        <div class="img-wrapper"><img ng-src="img/home-lua-minguante.png"></div>
+        <p>Nessa fase a planta absorve menos quantidade de seiva no caule, nas folhas e nos ramos.</p>
+        <p><strong>Fase boa para:</strong> plantar raízes como rabanetes, beterraba, cenoura, inhame, batata, cebola de cabeça. Ideal para tirar bambus, madeiras para construção e cabos para ferramentas.</p>
+      </div>
+      <div class="item item-footer">
+        <button class="button button-block button-balanced" ui-sref="app.plants_of_this_month">
+          O que plantar esse mês?
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.basic_tips">
+          Dicas básicas
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.planning">
+          Planejamento da Horta
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.weather">
+          Quando plantar
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.planting">
+          Como plantar
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.cares">
+          Cuidados com a Horta
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.plants">
+          Catálogo de hortaliças
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ui-sref="app.about">
+          Sobre
+        </button>
+        <br/>
+      </div>
+    </div>
+    <div ng-if="!region">
+      <div class="item item-body">
+        <div class="img-wrapper"><img ng-src="img/logo.png"></div>
+        <h3 class="text-center">Seja bem vindo ao Cultivar!</h3>
+        <p class="text-center">Para melhorar sua experiência selecione sua região abaixo:</p>
+      </div>
+      <div class="item item-footer animate-ripple">
+        <button class="button button-block button-balanced" ng-click="setRegion('Centro-oeste')">
+          Centro-oeste
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ng-click="setRegion('Nordeste')">
+          Nordeste
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ng-click="setRegion('Norte')">
+          Norte
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ng-click="setRegion('Sudeste')">
+          Sudeste
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ng-click="setRegion('Sul')">
+          Sul
+        </button>
+        <br/>
+        <button class="button button-block button-balanced" ng-click="clearRegion()">
+          Brasil todo
+        </button>
+        <br/>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
